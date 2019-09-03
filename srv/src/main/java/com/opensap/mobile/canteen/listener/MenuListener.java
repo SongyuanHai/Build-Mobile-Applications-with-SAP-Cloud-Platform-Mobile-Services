@@ -24,7 +24,6 @@ public class MenuListener extends com.sap.cloud.server.odata.DefaultEntityListen
 		// Shared code for beforeCreate / beforeUpdate.
 		// Check if the price of a menu is below 100 to generate a business rule
 		// validation
-		// entity.setPrice(entity.getPrice().add(new BigDecimal(100.0)));
 		if (entity.getPrice().compareTo(new BigDecimal(100.0)) == 1) {
 			throw DataServiceException
 					.validationError("Menu price needs to be under 100. Value was: " + entity.getPrice());
